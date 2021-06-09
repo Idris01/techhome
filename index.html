@@ -5,6 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>learning</title>
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    
+    <style type="text/css" media="all">
+   .main{
+     display:flex;
+     justify-content: center;
+     align-items: center ;
+     flex-flow :column wrap;
+     background:skyblue;
+     font-size:40px;
+   }
+  .contain{
+    display:flex;
+    flex-flow:column wrap;
+    justify-content: center ;
+    align-items: center;
+  }
+     .ball,.ball2{
+       display:inline-block;
+       width:2.5em;
+       height:2.5em;
+       border-radius: 50%;
+       
+     }
+    .ball{
+      transform:translateY(2.8em);
+      background:linear-gradient( lightgray, gray);
+    }
+   .ball2{
+background:linear-gradient( lightgray, gray);
+     transform:translateY(5em) rotateX(40deg)  scale(0.96);
+     z-index:2;
+     
+   }
+    .ring{
+      display:inline-block;
+      Width:3.5em;
+      height:3.5em;
+      transform:rotateX(60deg);
+      /*border:0.5em solid gray;*/
+      border-radius: 50%;
+      background:conic-gradient(
+      from 45deg,
+      rgba(250,120,10,0.5) 0deg 270deg,
+      rgba(0,0,0,0) 270deg 360deg
+      );
+      perspective:100px;
+      z-index:1;
+      
+    }
+     
+    .floor{
+      display: inline-block;
+      width:6em;
+      height:6em;
+      background-image:repeating-conic-gradient(
+      from 45deg,
+      #111 0deg 90deg,
+      #222 90deg 180deg
+      );
+      background-size: 1em 1em;
+      transform: rotateX(60deg);
+      perspective:200px;
+    }
+    </style>
   </head>
   
   <body>
@@ -21,14 +85,58 @@
           <li class="nav_item"><a class="nav_link" href="#">Contact</a></li>
       </ul>
       <div class="info">
+        <input type="radio" name="option" id="" />
+        <input type="radio" name="option" id="" />
+         <input type="radio" name="option" id="" />
         
       </div>
      </nav>
       
     </header>
     <div class="main">
+      <div class="contain">
+        <div class="ball2">
+          
+        </div>
+        <div class="ball">
+        
+      </div>
+      <div class="ring">
+        
+      </div>
+      </div>
       
+      <div class="floor">
+        
+      </div>
     </div>
+    
+    <!-- Deal items -->
+    <div class="deal">
+      <div class="deal_title">
+        <h4 class="">Top deals</h4>
+      </div>
+      <div class="deal_container">
+        <a class="item" href="#">
+          <img src="img/oraimo.png" alt="Oraimo Charger" />
+          <span class="discount">-25%</span>
+          <span class="item_name">Oraimo Fast Charger</span>
+            <span class="item_price">#1400</span>
+        </a>
+        <a class="item" href="#">
+          <img src="img/newage_fastcharger.png" alt="" />
+           <span class="item_price">#1500</span>
+          <span class="discount">-7%</span>
+        </a>
+        <a class="item" href="#">
+          <img src="img/nokia_phone.png" alt="" />
+          <span class="item_price">#6800</span>
+          <span class="discount">-10%</span>
+        </a>
+      </div>
+    </div>
+    
+    
     <footer class="footer">
       
     </footer>
