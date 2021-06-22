@@ -1,0 +1,102 @@
+:root{
+  --header_color:black;
+  --footer_color:black;
+  --brand_color:white;
+}
+
+/* Clear fix
+  This enables Normal sizing page elements 
+*/
+*, *::after, *::before{
+  box-sizing: border-box;
+  padding:0px;
+  margin:0px;
+}
+
+/* Give all images on the page a 
+  relative sizing 
+  */
+body img{
+  width:100%;
+}
+
+/* Body styles*/
+body{
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+  grid-template-columns:1fr;
+  grid-template-areas:
+  "header" 
+  "main" 
+  "footer";
+}
+
+/* Style the header*/
+header{
+  grid-area:header;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction:column;
+  flex-wrap:nowrap;
+  background:var(--header_color);
+  position:sticky;
+  top:0px;
+}
+
+/* Brand style
+ brand class is a div container that contains
+ the brand image and the brand brand_name
+ */
+.brand{
+  display:flex;
+  flex-direction:row;
+  flex-wrap:nowrap;
+  justify-content:center;
+  align-items:center;
+  padding:0.5em;
+}
+.brand_image{
+  width:5em;
+}
+.brand_name{
+  font-style:Italic;
+  color: var(--brand_color);
+}
+
+/* navigation styles */
+.nav{
+  list-style-type:none;
+  display:flex;
+  width:100%;
+  justify-content:center;
+  align-items:center;
+}
+
+.nav a{
+  display:inline-block;
+  padding:0.6em;
+  color:orange;
+  text-decoration:none;
+  text-transform:uppercase;
+  box-shadow: 0 0 1em gray;
+ 
+}
+
+/* Footer */
+footer{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  flex-wrap:nowrap;
+  background:var(--footer_color);
+}
+.social a{
+  display:inline-block;
+  width:4em;
+  object-fit:cover;
+}
+.copyright{
+  color:white;
+}

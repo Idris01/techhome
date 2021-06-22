@@ -1,0 +1,31 @@
+/* Fix the size of elements*/
+*, *::after, *::before {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+img, object, video, embed {
+  width: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto1fr auto;
+}
+
+main {
+  min-height: 100vh;
+}
+
+header, footer {
+  min-height: 10vh;
+  background: brown;
+}
+
+header {
+  position: sticky;
+  top: 0px;
+}
+
+/*# sourceMappingURL=style.css.map */
