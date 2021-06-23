@@ -1,7 +1,7 @@
 :root{
   --header_color:black;
   --footer_color:black;
-  --brand_color:white;
+  --brand_color:gold;
 }
 
 /* Clear fix
@@ -55,6 +55,7 @@ header{
   justify-content:center;
   align-items:center;
   padding:0.5em;
+  position:relative;
 }
 .brand_image{
   width:5em;
@@ -62,6 +63,16 @@ header{
 .brand_name{
   font-style:Italic;
   color: var(--brand_color);
+}
+.brand_motto{
+  position:absolute;
+  top:75%;
+  right:10%;
+  color:white;
+  font-style:italic;
+  font-size:65%;
+  visibility:hidden;
+  
 }
 
 /* navigation styles */
@@ -95,8 +106,24 @@ footer{
 .social a{
   display:inline-block;
   width:4em;
-  object-fit:cover;
 }
 .copyright{
   color:white;
+}
+
+@media screen and (min-width:550px){
+  header{
+    flex-direction:row;
+  }
+ .brand{
+   flex:4;
+ }
+.brand_motto{
+  visibility:visible;
+}
+.nav{
+  flex:6;
+  height:100%;
+  align-items:flex-end;
+}
 }
