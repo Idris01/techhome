@@ -18,6 +18,7 @@
   */
 body img{
   width:100%;
+  height: 100%;
 }
 
 /* Body styles*/
@@ -29,7 +30,10 @@ body{
   "header" 
   "main" 
   "footer";
+  
+  min-height:100vh;
 }
+
 
 /* Style the header*/
 header{
@@ -42,6 +46,7 @@ header{
   background:var(--header_color);
   position:sticky;
   top:0px;
+  z-index:5;
 }
 
 /* Brand style
@@ -61,7 +66,7 @@ header{
   width:5em;
 }
 .brand_name{
-  font-style:Italic;
+  font-style:italic;
   color: var(--brand_color);
 }
 .brand_motto{
@@ -94,8 +99,89 @@ header{
  
 }
 
+/* Main styles here */
+.main{
+  grid-area:main;
+  display:grid;
+  
+}
+figure{
+  height:100%;
+  width:80%;
+  object-fit:cover;
+  margin:0 auto;
+  padding-top:2em;
+  position:relative;
+  
+}
+figure img{
+  border-top-right-radius: 2em;
+  border-bottom-left-radius:2em;
+  width:100%;
+}
+figcaption{
+  text-align:center;
+  position:absolute;
+  top:50%;
+  padding:0.5em;
+  background:rgba(230, 230, 255,0.3);
+  width:100%;
+  font-style:italic ;
+  font-weight:bolder;
+  font-size:100%;
+  color:black;
+}
+.detail{
+  min-height:10em;
+  width:80%;
+  display:flex;
+  justify-content:center;
+  padding:3em;
+  box-shadow:0 0 10px lightgray;
+  margin: 2em auto 0 auto;
+  background:black;
+  color:white;
+  
+}
+.detail p{
+  width:100%;
+  height:auto;
+  text-align:center;
+  font-size:120%;
+ 
+  
+}
+.container{
+  display:flex;
+  flex-direction:column;
+  justify-content: space-around ;
+  margin-bottom: 3em;
+  gap:2em;
+}
+.item{
+  margin:0 auto;
+  object-fit:contain ;
+  display:grid;
+  grid-template-rows:1fr auto;
+  grid-template-columns:1fr;
+  width:80%;
+  box-shadow: 0 0 10px gray;
+  border-radius:2em;
+  padding: 2em;
+  flex: 1;
+  margin-top: 2em;
+}
+.description{
+  min-height:10%;
+  display:inline-block ;
+  padding: 1em;
+  text-align:center;
+}
+
+
 /* Footer */
 footer{
+  grid-area:footer;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -125,5 +211,14 @@ footer{
   flex:6;
   height:100%;
   align-items:flex-end;
+}
+.container{
+  flex-direction:row;
+}
+.item{
+  max-width:30%;
+}
+.detail{
+  width:60%;
 }
 }
