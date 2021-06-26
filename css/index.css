@@ -68,7 +68,10 @@ header{
 .brand_name{
   font-style:italic;
   color: var(--brand_color);
+  display:flex;
+  flex-flow:row nowrap;
 }
+
 .brand_motto{
   position:absolute;
   top:75%;
@@ -98,7 +101,11 @@ header{
   box-shadow: 0 0 1em gray;
  
 }
-
+/* this is to show contrast for selected pages */
+#home{
+  color:grey;
+  
+}
 /* Main styles here */
 .main{
   grid-area:main;
@@ -139,17 +146,13 @@ figcaption{
   padding:3em;
   box-shadow:0 0 10px lightgray;
   margin: 2em auto 0 auto;
-  background:black;
+  background:rgba(0,0,0,0.9);
   color:white;
-  
 }
-.detail p{
-  width:100%;
-  height:auto;
-  text-align:center;
-  font-size:120%;
- 
-  
+blockquote{
+  border-top:0.1em solid white;
+  border-bottom:0.1em solid white;
+  padding:0.5em;
 }
 .container{
   display:flex;
@@ -195,6 +198,7 @@ footer{
 }
 .copyright{
   color:white;
+  margin-bottom:2em;
 }
 
 @media screen and (min-width:550px){
@@ -207,13 +211,18 @@ footer{
 .brand_motto{
   visibility:visible;
 }
+.brand_name::after{
+  content:" Couture";
+  text-indent:0.15em;
+}
 .nav{
-  flex:6;
+  flex:5;
   height:100%;
   align-items:flex-end;
 }
 .container{
   flex-direction:row;
+  justify-content:;
 }
 .item{
   max-width:30%;
