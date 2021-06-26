@@ -111,6 +111,12 @@ header{
   grid-area:main;
   display:grid;
   
+grid-template-columns:2fr 1.2fr;
+  grid-template-rows:1fr auto auto;
+  grid-template-areas:
+  "pic pic"
+  "quote quote"
+  "service service";
 }
 figure{
   height:max(50vh,500px);
@@ -118,6 +124,7 @@ figure{
   margin:0 auto;
   padding-top:2em;
   position:relative;
+  grid-area:pic;
   
 }
 figure img{
@@ -140,15 +147,17 @@ figcaption{
   color:black;
 }
 .detail{
-  min-height:10em;
+  height:auto;
   width:80%;
   display:flex;
   justify-content:center;
-  padding:3em;
+  align-items:center;
+  padding:2em;
   box-shadow:0 0 10px lightgray;
   margin: 2em auto 0 auto;
   background:rgba(0,0,0,0.9);
   color:white;
+  grid-area:quote;
 }
 blockquote{
   border-top:0.1em solid white;
@@ -161,6 +170,7 @@ blockquote{
   justify-content: space-around ;
   margin-bottom: 3em;
   gap:2em;
+  grid-area:service;
 }
 .item{
   margin:0 auto;
@@ -203,6 +213,12 @@ footer{
 }
 
 @media screen and (min-width:550px){
+  .main{
+  grid-template-areas:
+  "pic quote"
+  "pic quote"
+  "service service"; 
+} 
   header{
     flex-direction:row;
   }
@@ -231,4 +247,5 @@ footer{
 .detail{
   width:60%;
 }
+
 }
